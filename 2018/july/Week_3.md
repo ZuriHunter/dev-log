@@ -13,3 +13,32 @@
   - Secrets and Configuration Management
   - Storage Orchestration: Automatically mount local, external, and storage solutions to the containers in a seamless manner, based on software-defined storage (SDS).
   - Batch Execution
+
+#### 2018-07-15
+- Container Orchestration is a system that help define relationships between a series of containers.
+- Before containers >> virtual machines & direct installations
+- Before container orchestrators >> homegrown scripts & manual static configuration between containers
+- Container Tools
+  - Docker
+  - Rkt
+  - Garden
+  - LXC
+  - Mesos
+- Container Orchestration Tools
+  - Kubernetes (Google called Borg)
+  - Docker Swarm
+  - Amazon Secrets
+  - Mesos
+- **MiniKube** is all-in-one Kubernetes.
+- Kubernetes CLI is **kubectl**
+- **Pods** are instances of a container in a deployment
+- **Services** are endpoints that export ports to the outside world
+- MAC Installation for kubectl >> `brew install kubectl`
+- Faced a VM issue and it turns out I needed to download Virtual Box.
+```
+VBoxManage not found. Make sure VirtualBox is installed and VBoxManage is in the path minikube
+```
+- `kubectl expose deployment hello-minikube --type=NodePort` <<< Need to learn about the different types of  `types`
+- `kubectl get pod` <<<< assuming command reveals what pods are available
+- Access cluster by curl `curl $(minikube service hello-minikube --url)`
+- Deployments are described as a collection of resources and references
