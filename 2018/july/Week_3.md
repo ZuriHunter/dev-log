@@ -1,12 +1,6 @@
 ```
-::::::::::::::    ::::::    :::   :::
-    :+:    :+:    :+::+:    :+:   :+:
-    +:+    +:+    +:++:+     +:+ +:+
-    +#+    +#+    +:++#+      +#++:  
-    +#+    +#+    +#++#+       +#+   
-#+# #+#    #+#    #+##+#       #+#   
- #####      ######## #############  
- ```
+```
+
 #### 2018-07-14
 - **Kubernetes** is an open-source system for automating deployment, scaling, and management of containerized applications.
   - In Zuri's understanding at the moment, I have a set of docker containers for my application, so if I need to make a whole new set of containers of my application I would Kubernetes to set that up for me automatically. It sounds to be more ideal for production.
@@ -35,6 +29,7 @@
   - Docker Swarm
   - Amazon Secrets
   - Mesos
+  - OpenShift
 - **MiniKube** is all-in-one Kubernetes.
 - Kubernetes CLI is **kubectl**
 - **Pods** are instances of a container in a deployment
