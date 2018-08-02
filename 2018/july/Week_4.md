@@ -47,4 +47,3 @@
   - Why use container orchestrators?
   - Kubernetes
 - Simple tool to convert docker-compose to Kubernetes https://kubernetes.io/blog/2016/11/kompose-tool-go-from-docker-compose-to-kubernetes/
-- 
