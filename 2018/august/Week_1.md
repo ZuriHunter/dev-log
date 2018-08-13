@@ -75,3 +75,7 @@
       }
     }
     ```
+
+#### 2018-08-02
+- **PyxelEdit**
+  - A little but of a more advanced interface. 
