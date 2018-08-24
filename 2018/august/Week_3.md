@@ -78,7 +78,11 @@
     - There are antipatterns in Pods?
       - It has to be _symbiotic_. Symbiotic means denoting a mutually beneficial relationship between different people or groups.
       - Stay away from applications that use the same scaling procedure.
-      - **Ask "Will these containers wrk correctly if they land on different machines?"  If the answer is "no", a Pod is the correct grouping for the containers.  If the answer is "yes", multiple Pods is probably the correct solution** <<< Dont really get it.
+      - 
+      ```
+      Ask "Will these containers wrk correctly if they land on different machines?"  If the answer is "no", a Pod is the correct grouping for the containers.  If the answer is "yes", multiple Pods is probably the correct solution
+      ```
+       <<< Dont really get it.
       -
 - I still don't fully understand what is a _memory leak_
 - What is System V IPC? What is POSIX message queues?
