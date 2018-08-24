@@ -1,18 +1,18 @@
 ```
-/^                                         /^^  
-/^ ^^                                       /^^  
+/^                                         /^^
+/^ ^^                                       /^^
 /^  /^^    /^^  /^^   /^^   /^^  /^^ /^^^^ /^/^ /^
-/^^   /^^   /^^  /^^ /^^  /^^/^^  /^^/^^      /^^  
-/^^^^^^ /^^  /^^  /^^/^^   /^^/^^  /^^  /^^^   /^^  
-/^^       /^^ /^^  /^^ /^^  /^^/^^  /^^    /^^  /^^  
+/^^   /^^   /^^  /^^ /^^  /^^/^^  /^^/^^      /^^
+/^^^^^^ /^^  /^^  /^^/^^   /^^/^^  /^^  /^^^   /^^
+/^^       /^^ /^^  /^^ /^^  /^^/^^  /^^    /^^  /^^
 /^^         /^^  /^^/^^     /^^   /^^/^^/^^ /^^   /^^
-                   /^^                          
+                   /^^
 ```
 
 #### 2018-08-12
 - **Kubernetes**
   - Deployment is usually stored and described in YAML format.
-  - `kubectl`  is a command line tool for interacting with the Kubernetes API.  
+  - `kubectl`  is a command line tool for interacting with the Kubernetes API.
     - pods
     - replicaSets
     - services
@@ -97,7 +97,7 @@
   - You must tell the schedule to _destroy_ and _reschedule_ a Pod.
   - **ReplicaSets are better suited for running multiple instances of a Pod.
   - Create a Pod
-    - kubectl command >>> `kubectl run NAME_OF_IMAGE --image=IMAGE_SOURCE`  
+    - kubectl command >>> `kubectl run NAME_OF_IMAGE --image=IMAGE_SOURCE`
       - `kubctl get pods` to view the pod by default
   - Pod manifest can be written YAML or JSON
     - `Metadata` describe the Pod and its labels
@@ -129,7 +129,7 @@
     kubectl delete pods/kuard
 
     # Delete by Pod Manifest
-    kubectl delete -f kuard-pod.yaml  
+    kubectl delete -f kuard-pod.yaml
     ```
     - It doesn't terminate immediate it gives a 30 second gracing period to let all in process request finish.
     - Data is deleted upon termination of the Pod, if you want the data to stick around it will have to be mounted as a volume so use **PersistentVolumes**
