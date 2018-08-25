@@ -1,3 +1,13 @@
+```
+/^                                         /^^
+/^ ^^                                       /^^
+/^  /^^    /^^  /^^   /^^   /^^  /^^ /^^^^ /^/^ /^
+/^^   /^^   /^^  /^^ /^^  /^^/^^  /^^/^^      /^^
+/^^^^^^ /^^  /^^  /^^/^^   /^^/^^  /^^  /^^^   /^^
+/^^       /^^ /^^  /^^ /^^  /^^/^^  /^^    /^^  /^^
+/^^         /^^  /^^/^^     /^^   /^^/^^/^^ /^^   /^^
+                   /^^
+```
 #### 2018-08-20
 
 - Unity is going to discontinue support for MonoDevelop. MonoDevelop is an IDE for C#, F# and many more languages.  They are going to switch to having developers use their preferred IDE or Visual Studio.  I am not too much of fan. But I will have to tailor the tutorial for anyone who wants to make a change to the unity-sdk to whatever they wish.
@@ -9,13 +19,13 @@
   - Open Source and Commercial are offered.
 
     | Features   |      Commercial      |  Open Source |
-    |----------|:-------------:|------:|
+    |----------|:-------------:|:------:|
     | Rights & Obligations|  X |GNU Lesser General Public License v.3  |
     |Essential libraries and APIs |    X   |   X |
     | Full Features | X |    X|
     | All Tools | X |    |
     | Embedded Tooling & Solutions | X |    |
-    | QT Support | right-aligned |   X |
+    | QT Support | X |   X|
     | Company Relationship w/ QT | X |   |
   - Features
     - 3D/2D Graphics & Image Processing
@@ -48,4 +58,4 @@
   - The idea is to have three services
     - User Management
     - UI
-    - LinkedIn API 
+    - LinkedIn API
