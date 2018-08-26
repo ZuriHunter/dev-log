@@ -59,3 +59,71 @@
     - User Management
     - UI
     - LinkedIn API
+- **Splunk**
+  - In a nutshell Splunk is basically a tool that allows for us to look at machine data smoothly.
+  - Three themes PinPoint <> Correlate <> Alert base off events occuring within the database that records all information.
+  - Records structured and unstructured data. Give insights on Security, User Behavior, Hardware and Financial transactions
+  - Downloaded Splunk locally and it spun up within the terminal, setup password and then I can log in the GUI.
+
+#### 2018-08-25
+- QT installation was long as hell.  To resolve it from not recognizing the latest version of Xcode run this line. `sudo /usr/bin/xcode-select -switch /Applications/Xcode.app/Contents/Developer`
+- **Splunk**
+  - Index Data
+    - Reads data and determine what it is an assign a `source type` to it. The worker then comes in and break the data into `events` with timestamps that are then indexed.
+  - Search & Investigate
+    - Entering a query you look for the data
+  - Add Knowledge
+    - Add labels to help give further information on the infor
+  - Monitor & Alert
+    - Create alerts on certain sourcetypes, labels and events.
+  - Report & Analyze
+  - Under the hood there is a Indexer, Search Head and Forwarder. Indexer breaks things up into folders base off of time. Search Head providers dashboards.  Forwarder consume data, lives on machine that sends the data to the Splunk Indexer. (Input, Parsing, Indexing, Searching)
+  - Three ways to input data: File Upload, Monitory Files and Directories, Forwarders which have Splunk client installed on it.
+
+- **The Bison Project**
+- Stop PG `brew services stop postgresql`
+- Start PG `brew services start postgresql`
+- In the PG shell to list DBs `\list`
+- Creating DBs. All done in the regular terminal
+```
+# Change the user to Postgres
+su - thestrugglingblack
+
+# Create DB
+createdb DATABASE_NAME
+```
+- The user that created the DB is the user that puts its name in the section where Postico asks for user...and if you didn't specify a password thats it.
+- After changing the database.yml, spinning up the Postgres and Postico instance, had to run `rake db:setup`
+
+#### 2018-08-26
+- QT finally finished installing. Only install the latest for Qt and not the others. Lost two days on downloading and installing the software
+- `CSS Houdini` gives access to lower level of CSS
+- The CSS Paint API allows you to call the `paint()` function instead and pass in a paint worklet that you have defined through JavaScript. It kind of operates like `<canvas>`
+- CSS Paint API is only supported on Chrome 65, Opera 52, Android 67 and Android Chrome 67...not many browsers at the end of the day.
+- Name the worklet and call it within the CSS
+```
+# .css
+section {
+  background-image: paint(awesomeSauce)
+}
+
+# .js
+CSS.paintWorklet.addModule('patternWorklet.js');
+
+# patternWorklet.js
+registerPaint('awesomeSauce', Shape); // call and define first
+
+class Shape {
+  paint(ctx, geom, properties) {
+
+    ctx.strokeStyle = 'white';
+    ctx.lineWidth = 4;
+    ctx.beginPath();
+    ctx.arc( 200, 200, 50, 0, 2*Math.PI);
+    ctx.stroke();
+    ctx.closePath();
+
+  }
+}
+
+```
