@@ -125,5 +125,46 @@ class Shape {
 
   }
 }
-
 ```
+- **Kubernetes Up and Running**
+  - `Healthchecks`
+    - ensures that the main process of your application is always running. It was introduced to check on application liveliness.
+    ```
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: kuard
+    spec:
+      containers:
+        - image: gcr.io/kuar-demo/kuard-amd64:1
+          name: kuard
+          livenessProbe:
+            httpGet:
+              path: /healthy
+              port: 8080
+            initialDelaySeconds: 5
+            timeoutSeconds: 1
+            periodSeconds: 10
+            failureThreshold: 3
+          ports:
+            - containerPort: 8080
+              name: http
+              protocol: TCP
+    ```
+    - In the example above the probing is being done as a HTTP GET probe, hence to `httpGet`.  The HTTP GET probe hits the endpoint at `/healthy` which lies on the port 8080. So it would unravel as `GET http://localhost:8080/healthy`.
+    - The probe wont kick off until 5 seconds since the container opens up base off this property `initialDelaySeconds`.
+    -  The probe must respond within 1 second base off of `timeSeconds` property.
+    - The response from the probe must be above 200 but less than 400 to be considered a successful response.  
+    - `periodSeconds` means that the healthcheck probe will kick offevery 10 seconds to see if the container is still in good standing.  
+    - The `failureThreshold` will say if the probe fails more than three times restart the container.
+    - **Readiness**
+      - `Liveness` determines if an application is running properly.
+      - `Readiness` describes when a container is ready to serve user requests.
+    - **Types of Checks**
+      - `tcpSocket` and `exec` are examples
+      - TCP can be for databases probing and exec for running scripts.
+      - For scripts if it exits zero then it would be classified as a successful probe.
+  - `Resource Management`
+    - `Utilization` is defined as the amount of a resource actively being used divided by the amount of resource that has been purchased.
+    - Two Metrics
+      - 
